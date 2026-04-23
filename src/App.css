@@ -188,6 +188,19 @@
   background: rgba(255, 255, 255, 0.72);
   padding: 5px 4px;
   border: 1px solid rgba(22, 33, 38, 0.08);
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.month-cell:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.month-cell:focus-visible {
+  outline: 2px solid #0f7e70;
+  outline-offset: 1px;
 }
 
 .month-cell.is-selected {
@@ -329,6 +342,11 @@
   line-height: 1.3;
 }
 
+.deleted-text {
+  color: #667781;
+  font-style: italic;
+}
+
 .incoming .bubble {
   background: #fff;
   border-top-left-radius: 4px;
@@ -410,6 +428,47 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.scenario-widget {
+  padding: 0 10px 10px;
+}
+
+.scenario-title {
+  margin: 0 0 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #42565c;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.scenario-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.scenario-chip {
+  border: 1px solid rgba(12, 69, 62, 0.18);
+  background: rgba(255, 255, 255, 0.9);
+  color: #204147;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 5px 9px;
+  cursor: pointer;
+}
+
+.scenario-chip:focus-visible {
+  outline: 2px solid #0f7e70;
+  outline-offset: 1px;
+}
+
+.chip-danger {
+  border-color: rgba(138, 46, 46, 0.3);
+  color: #8a2e2e;
+  background: rgba(255, 240, 240, 0.95);
 }
 
 @media (min-width: 640px) {
