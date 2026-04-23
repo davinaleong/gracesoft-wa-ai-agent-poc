@@ -8,13 +8,13 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   padding: 10px 10px 0;
 }
 
 .phone-frame {
   width: 100%;
-  min-height: calc(100svh - 68px);
+  min-height: calc(100svh - 156px);
   background-color: #e9e4d7;
   background-image:
     radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.7), transparent 38%),
@@ -431,7 +431,12 @@
 }
 
 .scenario-widget {
-  padding: 0 10px 10px;
+  width: min(100%, 420px);
+  padding: 8px;
+  border-radius: 16px;
+  background: rgba(244, 247, 248, 0.96);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .scenario-title {
@@ -474,7 +479,7 @@
 @media (min-width: 640px) {
   .chat-shell {
     padding: 20px;
-    gap: 14px;
+    gap: 12px;
   }
 
   .phone-frame {

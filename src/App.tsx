@@ -564,6 +564,57 @@ function App() {
         </button>
       </nav>
 
+      <section className="scenario-widget" aria-label="Scenario simulator">
+        <p className="scenario-title">Quick Scenario Tester</p>
+        <div className="scenario-chip-list">
+          <button type="button" className="scenario-chip" onClick={() => runScenario('faq')}>
+            FAQ Enquiry
+          </button>
+          <button
+            type="button"
+            className="scenario-chip"
+            onClick={() => runScenario('book-missing-time')}
+          >
+            Book (No Date/Time)
+          </button>
+          <button
+            type="button"
+            className="scenario-chip"
+            onClick={() => runScenario('book-with-time')}
+          >
+            Book (With Slot)
+          </button>
+          <button
+            type="button"
+            className="scenario-chip"
+            onClick={() => runScenario('book-unavailable')}
+          >
+            Book (Unavailable)
+          </button>
+          <button
+            type="button"
+            className="scenario-chip"
+            onClick={() => runScenario('positive-feedback')}
+          >
+            Positive Feedback
+          </button>
+          <button
+            type="button"
+            className="scenario-chip"
+            onClick={() => runScenario('negative-feedback')}
+          >
+            Negative Feedback
+          </button>
+          <button
+            type="button"
+            className="scenario-chip chip-danger"
+            onClick={() => runScenario('inappropriate')}
+          >
+            Inappropriate Msg
+          </button>
+        </div>
+      </section>
+
       <section className="phone-frame">
         {view === 'chat' && (
           <header className="chat-header" aria-label="Conversation header">
@@ -639,57 +690,6 @@ function App() {
                 &#10148;
               </button>
             </form>
-
-            <section className="scenario-widget" aria-label="Scenario simulator">
-              <p className="scenario-title">Quick Scenario Tester</p>
-              <div className="scenario-chip-list">
-                <button type="button" className="scenario-chip" onClick={() => runScenario('faq')}>
-                  FAQ Enquiry
-                </button>
-                <button
-                  type="button"
-                  className="scenario-chip"
-                  onClick={() => runScenario('book-missing-time')}
-                >
-                  Book (No Date/Time)
-                </button>
-                <button
-                  type="button"
-                  className="scenario-chip"
-                  onClick={() => runScenario('book-with-time')}
-                >
-                  Book (With Slot)
-                </button>
-                <button
-                  type="button"
-                  className="scenario-chip"
-                  onClick={() => runScenario('book-unavailable')}
-                >
-                  Book (Unavailable)
-                </button>
-                <button
-                  type="button"
-                  className="scenario-chip"
-                  onClick={() => runScenario('positive-feedback')}
-                >
-                  Positive Feedback
-                </button>
-                <button
-                  type="button"
-                  className="scenario-chip"
-                  onClick={() => runScenario('negative-feedback')}
-                >
-                  Negative Feedback
-                </button>
-                <button
-                  type="button"
-                  className="scenario-chip chip-danger"
-                  onClick={() => runScenario('inappropriate')}
-                >
-                  Inappropriate Msg
-                </button>
-              </div>
-            </section>
           </>
         )}
 
