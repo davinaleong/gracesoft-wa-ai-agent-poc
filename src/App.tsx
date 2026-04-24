@@ -10,7 +10,7 @@ type Message = {
   deleted?: boolean
 }
 
-type AppView = 'chat' | 'month' | 'day'
+type AppView = 'chat' | 'month' | 'day' | 'contact'
 
 type CalendarEvent = {
   id: string
@@ -562,6 +562,13 @@ function App() {
         >
           Day
         </button>
+        <button
+          type="button"
+          className={`view-tab ${view === 'contact' ? 'active' : ''}`}
+          onClick={() => setView('contact')}
+        >
+          Contact
+        </button>
       </nav>
 
       <section className="scenario-widget" aria-label="Scenario simulator">
@@ -741,6 +748,16 @@ function App() {
                 </li>
               ))}
             </ul>
+          </section>
+        )}
+
+        {view === 'contact' && (
+          <section className="contact-view" aria-label="Contact form view">
+            <iframe
+              src="https://capture.gracesoft.dev/form/frm_fb7f4e12d58ce1ba6f385654e421df72?surface=none"
+              title="GraceSoft contact form"
+              className="contact-iframe"
+            />
           </section>
         )}
       </section>
