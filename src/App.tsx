@@ -591,27 +591,6 @@ function App() {
           >
             Book (Unavailable)
           </button>
-          <button
-            type="button"
-            className="scenario-chip"
-            onClick={() => runScenario('positive-feedback')}
-          >
-            Positive Feedback
-          </button>
-          <button
-            type="button"
-            className="scenario-chip"
-            onClick={() => runScenario('negative-feedback')}
-          >
-            Negative Feedback
-          </button>
-          <button
-            type="button"
-            className="scenario-chip chip-danger"
-            onClick={() => runScenario('inappropriate')}
-          >
-            Inappropriate Msg
-          </button>
         </div>
       </section>
 
