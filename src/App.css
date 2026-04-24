@@ -1,5 +1,7 @@
 .chat-shell {
   min-height: 100svh;
+  height: 100svh;
+  width: 100%;
   background:
     radial-gradient(circle at 16% 18%, rgba(255, 255, 255, 0.22), transparent 36%),
     radial-gradient(circle at 86% 4%, rgba(255, 255, 255, 0.2), transparent 30%),
@@ -14,7 +16,8 @@
 
 .phone-frame {
   width: 100%;
-  min-height: calc(100svh - 156px);
+  flex: 1;
+  min-height: 0;
   background-color: #e9e4d7;
   background-image:
     radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.7), transparent 38%),
@@ -27,6 +30,8 @@
     );
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
 .chat-header {
@@ -46,6 +51,8 @@
 
 .view-switcher {
   width: min(100%, 420px);
+  align-self: center;
+  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6px;
@@ -131,8 +138,9 @@
 
 .chat-body {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  padding: 14px 10px;
+  padding: 14px 10px 88px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -368,6 +376,11 @@
 }
 
 .composer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -432,6 +445,8 @@
 
 .scenario-widget {
   width: min(100%, 420px);
+  align-self: center;
+  margin-inline: auto;
   padding: 8px;
   border-radius: 16px;
   background: rgba(244, 247, 248, 0.96);
@@ -483,10 +498,8 @@
   }
 
   .phone-frame {
-    width: min(100%, 420px);
-    min-height: 760px;
+    width: 100%;
     border-radius: 24px;
-    overflow: hidden;
     box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
   }
 }
